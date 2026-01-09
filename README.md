@@ -1,6 +1,19 @@
-# govtech-dre-aip-terraform
+# Terraform Monorepo Structure
 
-This repository contains separate Terraform roots per component (vpc, ec2, s3)
-and per environment (dev, staging, prod). Each leaf directory is an independent
-Terraform root module with its own state/backend, variables, and provider
-configuration.
+## Directory Structure
+# ├── src/
+# │   ├── environments/
+# │   │   ├── dev.tfvars
+# │   │   ├── stage.tfvars
+# │   │   └── prod.tfvars
+# │   └── resources/
+# │       ├── vpc/
+# │       │   ├── main.tf
+# │       │   ├── outputs.tf
+# │       │   ├── provider.tf
+# │       │   ├── terraform.tfvars
+# │       │   └── variables.tf
+# │       ├── ec2/     # Same structure
+# │       └── s3/      # Same structure
+# └── README.md
+
